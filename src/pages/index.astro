@@ -1,12 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css'
 
 const title = 'Astro | Index';
 ---
 
-<Layout>
-	<a href="/">Inicio</a>
-	<a href="/about">Acerca de</a>
-	<a href="/blog">Blog</a>
+<Layout title = {title} >
+
+	<Header/>
 	<h1>{title}</h1>
+
+	<Footer/>
+	<script>
+		import '../scripts/menu.js'
+	</script>
 </Layout>

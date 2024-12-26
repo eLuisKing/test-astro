@@ -1,3 +1,7 @@
+---
+const {title} = Astro.props;
+---
+
 <!doctype html>
 <html lang="es">
 	<head>
@@ -6,7 +10,7 @@
 		<meta name="description" content="Este es un blog creado para testear Astro xd.">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro test</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />

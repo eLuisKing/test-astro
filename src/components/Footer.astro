@@ -1,0 +1,22 @@
+---
+import Social from "./Social.astro";
+
+const platform = "github";
+const username = "withastro";
+
+
+console.log(username)
+---
+
+<footer>
+  <p>¡Más información sobre mis proyectos en <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p>
+  <Social plaform = 'instagram' username = 'eluisking'/>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
