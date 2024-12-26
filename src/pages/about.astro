@@ -1,8 +1,52 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
+import '../styles/global.css'
+
+const title = "Astro | About";
+
+const identity = {
+  firstName: "Luis Angel Santillan",
+  country: "Mexico",
+  occupation: "De todo un poco xd",
+  hobbies: [" fotografia", " dibujar", " escribir"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "Ahora Astro"];
+
+//Variable de CSS
+const skillColor = "red"
+const nameBold = 'bold'
 ---
 
 <Layout>
-    <a href="/">Inicio</a>
-    <h1>Hola soy about</h1>
+  <a href="/">Inicio</a>
+  <h1>{title}</h1>
+
+  <h2>Aqui algunos datos sobre mi:</h2>
+  <p class="name-about">Mi Nombre es {identity.firstName}</p>
+  <p>Vivo en {identity.country} y me dedico a {identity.occupation}</p>
+  <p>Mis hobbies son {identity.hobbies}</p>
+  <p>
+    Mis abilidades son
+    <ul>
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
+  </p>
 </Layout>
+
+<style define:vars="{{skillColor, nameBold}}">
+  h1 {
+    color: purple;
+    font-size: 4rem;
+  }
+
+  .name-about {
+    font-weight: var(--nameBold);
+  }
+
+  .skill {
+    /* color: green; */
+    color: var(--skillColor);
+    font-weight: bold;
+  }
+</style>
