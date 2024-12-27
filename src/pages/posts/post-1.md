@@ -1,12 +1,13 @@
 ---
-title: 'Mi primera publicacion en el blog'
-pubDate: 2024-12-24
-description: 'Esta es la primera publicacion en el blog del proyecto test-astro'
-autor: 'eluisking'
+layout: ../../layouts/MdLayout.astro
+title: 'Mi primera publicación en el blog'
+pubDate: 2022-07-01
+description: 'Este es la primera publicación de mi nuevo blog de Astro.'
+author: 'Luis Angel'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'El logotipo completo de Astro.'
-tags: ['astro', 'test', 'aprender']
+tags: ["astro", "bloguear", "aprender en público"]
 ---
 
 #Mi primer publicacion de blog
